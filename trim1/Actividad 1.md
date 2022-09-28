@@ -1,5 +1,3 @@
-# pni_bruno_gg
-
 1-a)11001=25
 b)1011011011=731
 He elevado los números en base a su posición, los he solucionado y he escogido los números de base 1, ej: 11001=1*2^4+1*2^3+0*2^2+0+2^1+1*2^0=16+8+1=25
