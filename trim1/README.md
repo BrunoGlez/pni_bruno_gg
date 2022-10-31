@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 # pni_bruno_gg
 
+=======
+>>>>>>> 0da81fbf943f5bab49b0cb50ad232df2a34e39fb
 1-a)11001=25
 b)1011011011=731
 He elevado los números en base a su posición, los he solucionado y he escogido los números de base 1, ej: 11001=1*2^4+1*2^3+0*2^2+0+2^1+1*2^0=16+8+1=25
@@ -25,4 +28,8 @@ He separado los números en grupos de cuatro (rellenando con ceros en caso de qu
 6-a)86BF=100001110111111
 b)2D5E=1011011011110
 
+<<<<<<< HEAD
 He pasado cada número a binario y las letras, con ayuda de la tabla, también. Luego he juntado los números resultantes para obtener el resultado.
+=======
+He pasado cada número a binario y las letras, con ayuda de la tabla, también. Luego he juntado los números resultantes para obtener el resultado.
+>>>>>>> 0da81fbf943f5bab49b0cb50ad232df2a34e39fb
