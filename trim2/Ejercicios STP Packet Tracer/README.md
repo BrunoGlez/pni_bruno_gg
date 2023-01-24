@@ -1,4 +1,4 @@
-### ***Actividades STP Packet Tracer
+### *** Actividades STP Packet Tracer
 
 ## Identificar puente raíz.
 
