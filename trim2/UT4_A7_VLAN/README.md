@@ -258,7 +258,6 @@ Capture VLANs Allowed: ALL
 Protected: false
 ~~~
 
-GUARDAR CON: copy running-config startup-config
 
 Nota: Reemplaza "interface\_number" y "vlan\_list" con los valores apropiados para tu entorno.
 
