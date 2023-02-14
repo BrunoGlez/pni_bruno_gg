@@ -216,6 +216,7 @@ Complete los siguientes pasos para guardar la configuración de inicio en la mem
 a. Examine el contenido de la memoria flash con el comando `show flash` :
 
 ```
+R1#show flash
 ```
 ¿Cuántos archivos hay almacenados actualmente en la memoria flash?
 
