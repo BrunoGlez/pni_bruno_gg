@@ -258,13 +258,13 @@ FastEthernet0/0 is administratively down, line protocol is down (disabled)
 + Router A
 
 ```
-
+RouterA(config)#ip route 186.150.130.0 255.255.255.0 192.168.232.34
 ```
 
 + Router B
 
 ```
-
+RouterB(config)#ip route 103.0.0.0 255.0.0.0 192.168.232.25
 ```
 
 + Router C
@@ -278,19 +278,88 @@ RouterC(config)#ip route 219.240.10.0 255.255.255.0 219.240.10.56
 + Router A
 
 ```
+RouterA#show running-config 
+Building configuration...
 
+Current configuration : 954 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname RouterA
+!
+!
+!
+enable password cisco2223
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+ --More-- 
 ```
 
 + Router B
 
 ```
+RouterB#show running-config 
+Building configuration...
 
+Current configuration : 873 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname RouterB
+!
+!
+!
+enable password cisco2223
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+ --More-- 
 ```
 
 + Router C
 
 ```
+RouterC#show running-config 
+Building configuration...
 
+Current configuration : 788 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname RouterC
+!
+!
+!
+enable password cisco2223
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+ --More-- 
 ```
 
 10. Antes de hacer `ping` entre hosts muestra la tabla `arp` de los routers y de un `PC` de cada red:
@@ -298,13 +367,18 @@ RouterC(config)#ip route 219.240.10.0 255.255.255.0 219.240.10.56
 + Router A
 
 ```
-
+RouterA#show arp 
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  186.150.130.89          -   00D0.BCC1.D701  ARPA   FastEthernet0/0
+Internet  199.240.10.43           -   00D0.BCC1.D702  ARPA   FastEthernet0/1
 ```
 
 + Router B
 
 ```
-
+RouterB#show arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  103.150.164.7           -   0003.E415.D901  ARPA   FastEthernet0/0
 ```
 
 + Router C
