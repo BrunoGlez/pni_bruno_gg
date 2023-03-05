@@ -384,101 +384,194 @@ Internet  103.150.164.7           -   0003.E415.D901  ARPA   FastEthernet0/0
 + Router C
 
 ```
-
+Aparece vacío
 ```
 
 + PC de la RED 1
 
 ```
-
+C:\>arp -a
+No ARP Entries Found
 ``` 
 
 + PC de la RED 2
 
 ```
-
+C:\>arp -a
+No ARP Entries Found
 ``` 
 
 + PC de la RED 3
 
 ```
-
+C:\>arp -a
+No ARP Entries Found
 ``` 
 
 
 
 11. Realiza un un ping entre un PC de cada una de las redes con otro para comprobar la conectividad:
 
+Por algún motivo, los equipos no tienen conexión entre ellos. He probado a arreglarlo pero no consigo encontrar el error.
+
 + RED 1 -> RED 2
 
 ```
+C:\>ping 199.240.10.12
 
+Pinging 199.240.10.12 with 32 bytes of data:
+
+Request timed out.
+Request timed out.
+
+Ping statistics for 199.240.10.12:
+    Packets: Sent = 3, Received = 0, Lost = 3 (100% loss),
 ``` 
 
 + RED 1 -> RED 3
 
 ```
+C:\>ping 103.150.164.15
 
+Pinging 103.150.164.15 with 32 bytes of data:
+
+
+Ping statistics for 103.150.164.15:
+    Packets: Sent = 1, Received = 0, Lost = 1 (100% loss),
 ``` 
 
 + RED 1 -> RED 4
 
 ```
+C:\>ping 219.240.10.107
 
+Pinging 219.240.10.107 with 32 bytes of data:
+
+
+Ping statistics for 219.240.10.107:
+    Packets: Sent = 1, Received = 0, Lost = 1 (100% loss),
 ``` 
 
 + RED 2 -> RED 1
 
 ```
+C:\>ping 186.150.130.1
 
+Pinging 186.150.130.1 with 32 bytes of data:
+
+
+Ping statistics for 186.150.130.1:
+    Packets: Sent = 1, Received = 0, Lost = 1 (100% loss),
 ``` 
 
 + RED 2 -> RED 3
 
 ```
+C:\>ping 103.150.164.15
 
+Pinging 103.150.164.15 with 32 bytes of data:
+
+Reply from 199.240.10.43: Destination host unreachable.
+Reply from 199.240.10.43: Destination host unreachable.
+Reply from 199.240.10.43: Destination host unreachable.
+Reply from 199.240.10.43: Destination host unreachable.
+
+Ping statistics for 103.150.164.15:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
 ``` 
 
 + RED 2 -> RED 4
 
 ```
+C:\>ping 219.240.10.5
 
+Pinging 219.240.10.5 with 32 bytes of data:
+
+Reply from 199.240.10.43: Destination host unreachable.
+Reply from 199.240.10.43: Destination host unreachable.
+Reply from 199.240.10.43: Destination host unreachable.
+
+Ping statistics for 219.240.10.5:
+    Packets: Sent = 3, Received = 0, Lost = 3 (100% loss),
 ``` 
 
 + RED 3 -> RED 1
 
 ```
+C:\>ping 186.150.130.1
 
+Pinging 186.150.130.1 with 32 bytes of data:
+
+Reply from 103.150.164.7: Destination host unreachable.
+Reply from 103.150.164.7: Destination host unreachable.
+Reply from 103.150.164.7: Destination host unreachable.
+
+Ping statistics for 186.150.130.1:
+    Packets: Sent = 3, Received = 0, Lost = 3 (100% loss),
 ``` 
 
 + RED 3 -> RED 2
 
 ```
+C:\>ping 199.240.10.12
 
+Pinging 199.240.10.12 with 32 bytes of data:
+
+Reply from 103.150.164.7: Destination host unreachable.
+Reply from 103.150.164.7: Destination host unreachable.
+
+Ping statistics for 199.240.10.12:
+    Packets: Sent = 2, Received = 0, Lost = 2 (100% loss),
 ``` 
 
 + RED 3 -> RED 4
 
 ```
+C:\>ping 219.240.10.5
 
+Pinging 219.240.10.5 with 32 bytes of data:
+
+Reply from 103.150.164.7: Destination host unreachable.
+Reply from 103.150.164.7: Destination host unreachable.
+
+Ping statistics for 219.240.10.5:
+    Packets: Sent = 2, Received = 0, Lost = 2 (100% loss),
 ``` 
 
 + RED 4 -> RED 1
 
 ```
+C:\>ping 186.150.130.1
 
+Pinging 186.150.130.1 with 32 bytes of data:
+
+
+Ping statistics for 186.150.130.1:
+    Packets: Sent = 1, Received = 0, Lost = 1 (100% loss),
 ``` 
 
 + RED 4 -> RED 2
 
 ```
+C:\>ping 199.240.10.12
 
+Pinging 199.240.10.12 with 32 bytes of data:
+
+
+Ping statistics for 199.240.10.12:
+    Packets: Sent = 1, Received = 0, Lost = 1 (100% loss),
 ``` 
 
 + RED 4 -> RED 3
 
 ```
+C:\>ping 103.150.164.15
 
+Pinging 103.150.164.15 with 32 bytes of data:
+
+
+Ping statistics for 103.150.164.15:
+    Packets: Sent = 1, Received = 0, Lost = 1 (100% loss),
 ``` 
 
 12. Vuelve a  mostrar la tabla `arp` de los routers y de un `PC` de cada red:
@@ -486,37 +579,48 @@ Internet  103.150.164.7           -   0003.E415.D901  ARPA   FastEthernet0/0
 + Router A
 
 ```
-
+RouterA#show arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  186.150.130.1           7   00E0.F717.9106  ARPA   FastEthernet0/0
+Internet  186.150.130.89          -   00D0.BCC1.D701  ARPA   FastEthernet0/0
+Internet  199.240.10.12           7   00E0.8F6D.AB64  ARPA   FastEthernet0/1
+Internet  199.240.10.43           -   00D0.BCC1.D702  ARPA   FastEthernet0/1
 ```
 
 + Router B
 
 ```
-
+RouterB#show arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  103.150.164.7           -   0003.E415.D901  ARPA   FastEthernet0/0
+Internet  103.150.164.15          3   0060.5CDD.602E  ARPA   FastEthernet0/0
 ```
 
 + Router C
 
 ```
-
+Vacío
 ```
 
 + PC de la RED 1
 
 ```
-
+C:\>arp -a
+No ARP Entries Found
 ``` 
 
 + PC de la RED 2
 
 ```
-
+C:\>arp -a
+No ARP Entries Found
 ``` 
 
 + PC de la RED 3
 
 ```
-
+C:\>arp -a
+No ARP Entries Found
 ``` 
 
 13. Salva la configuración de cada uno de los routers:
@@ -524,19 +628,28 @@ Internet  103.150.164.7           -   0003.E415.D901  ARPA   FastEthernet0/0
 + Router A
 
 ```
-
+RouterA#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
 ```
 
 + Router B
 
 ```
-
+RouterB#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
 ```
 
 + Router C
 
 ```
-
+RouterC#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
 ```
 
 
